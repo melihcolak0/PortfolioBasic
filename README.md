@@ -14,10 +14,9 @@ Projede genel anlamda 3 farklı bölüm bulunmaktadır;
 
 ## :arrow_forward: Projeden Ekran Görüntüleri
 
-### :triangular_flag_on_post: Ana Sayfa DEVAMMM....
-Öne Çıkan bölümünde ismim, pozisyonum ve sosyal medya hesaplarım yer almaktadır. Bu sayfa, kullanıcıyı karşılayan giriş sayfası olarak düşünülebilir.
+### :triangular_flag_on_post: Ana Sayfa
 <div align="center">
-  <img src="https://github.com/melihcolak0/NETCore_Portfolio/blob/c9017bd684dc5e65ee5a89186e79b84a93318a17/ss/showCaseFeature.jpg" alt="image alt">
+  <img src="https://github.com/melihcolak0/PortfolioBasic/blob/bdf5775244844a5dcb1d155907b4116f6f28ccb0/ss/localhost_7168_Default_Index.png" alt="image alt">
 </div>
 
 ### :triangular_flag_on_post: Hakkımda Bölümü
