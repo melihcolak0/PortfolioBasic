@@ -1,0 +1,53 @@
+﻿@model List<ToDoList>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container-fluid">
+    <h4 class="page-title">Yapılacaklar</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Yapılacaklar'ın Listelenmesi</div>
+                </div>
+                <div class="card-body">
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">İçerik</th>
+                                <th scope="col">Tarih</th>
+                                <th scope="col">Durum</th>
+                                <th scope="col">Sil</th>
+                                <th scope="col">Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ToDoListId</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.Date.ToShortDateString()</td>
+                                    @if (item.Status == true)
+                                    {
+                                        <td><a href="/AdminToDoList/MakeStatusToFalse/@item.ToDoListId" class="btn btn-dark"> Yapılmadı Yap</a></td>
+                                    }
+                                    else
+                                    {
+                                        <td><a href="/AdminToDoList/MakeStatusToTrue/@item.ToDoListId" class="btn btn-info"> Yapıldı Yap</a></td>
+                                    }
+                                    <td><a href="/AdminToDoList/DeleteToDoList/@item.ToDoListId" class="btn btn-danger"> Sil</a></td>
+                                    <td><a href="/AdminToDoList/UpdateToDoList/@item.ToDoListId" class="btn btn-warning"> Güncelle</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/AdminToDoList/AddToDoList" class="btn btn-primary"> Yeni Yapılacak İşlem Ekle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

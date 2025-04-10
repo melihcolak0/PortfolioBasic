@@ -1,0 +1,52 @@
+﻿@model List<_91MY_PortfolioBasic.DAL.Entities.Experience>
+<div class="row about-content about-content--timeline">
+
+    <div class="col-full text-center">
+        <h3>İş ve Proje Deneyimlerim</h3>
+    </div>
+
+    <div class="col-six tab-full left">
+        <div class="timeline">
+            @foreach(var item in Model)
+            {
+                if(item.ExperienceId == 1 || item.ExperienceId == 2)
+                {
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">@item.Date</p>
+                            <h3>@item.Head</h3>
+                            <h5>@item.Title</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div> <!-- end timeline -->
+    </div> <!-- end left -->
+
+    <div class="col-six tab-full right">
+        <div class="timeline">
+            @foreach (var item in Model)
+            {
+                if (item.ExperienceId == 3)
+                {
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">@item.Date</p>
+                            <h3>@item.Head</h3>
+                            <h5>@item.Title</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div> <!-- end timeline -->
+    </div> <!-- end right -->
+
+</div> <!-- end about-content timeline -->

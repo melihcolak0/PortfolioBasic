@@ -1,0 +1,320 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container-fluid">
+	<h4 class="page-title">İstatistikler</h4>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card card-stats card-warning">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-lightbulb-o"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Yetenek Sayısı</p>
+								<h4 class="card-title">@ViewBag.skillCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-success">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-envelope"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Toplam Mesaj Sayısı</p>
+								<h4 class="card-title">@ViewBag.messageCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-danger">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-check-square"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Okunmuş Mesaj Sayısı</p>
+								<h4 class="card-title">@ViewBag.readMessageCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-primary">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-envelope"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Okunmamış Mesaj Sayısı</p>
+								<h4 class="card-title">@ViewBag.unreadMessageCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>	
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card card-stats card-info">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-briefcase"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Proje Sayısı</p>
+								<h4 class="card-title">@ViewBag.portfolioCount </h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-dark">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-share-alt"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Sosyal Medya Sayısı</p>
+								<h4 class="card-title">@ViewBag.socialMediaCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-primary">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-user-plus"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Referans Sayısı</p>
+								<h4 class="card-title">@ViewBag.testimonialCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-danger">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-tasks"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Yapılacak Sayısı</p>
+								<h4 class="card-title">@ViewBag.toDoListCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card card-stats card-success">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-times-circle"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Yapılmayan Sayısı</p>
+								<h4 class="card-title">@ViewBag.unDoneToDoListCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-info">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-check"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Yapılan Sayısı</p>
+								<h4 class="card-title">@ViewBag.doneToDoListCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-dark">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-user"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Hakkımda Bölümü Sayısı</p>
+								<h4 class="card-title">@ViewBag.aboutCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-info">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-phone"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">İletişim Bölümü Sayısı</p>
+								<h4 class="card-title">@ViewBag.contactCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card card-stats card-primary" style="display:none;">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-briefcase"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Deneyim Sayısı</p>
+								<h4 class="card-title">@ViewBag.experienceCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-danger">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-star"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Öne Çıkan Bölüm Sayısı</p>
+								<h4 class="card-title">@ViewBag.featureCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-warning">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-newspaper-o"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Deneyim Sayısı</p>
+								<h4 class="card-title">@ViewBag.experienceCount</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card card-stats card-dark" style="display:none;">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5">
+							<div class="icon-big text-center">
+								<i class="la la-check-circle"></i>
+							</div>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<div class="numbers">
+								<p class="card-category">Order</p>
+								<h4 class="card-title">576</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

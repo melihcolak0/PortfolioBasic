@@ -1,0 +1,45 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container-fluid">
+    <h4 class="page-title">İletişim</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">İletişim Bölümü'nün Listelenmesi</div>
+                </div>
+                <div class="card-body">
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Başlık</th>
+                                <th scope="col">Telefon Numarası</th>
+                                <th scope="col">E-Mail</th>
+                                <th scope="col">Sil</th>
+                                <th scope="col">Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ContactId</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.PhoneNumber1</td>
+                                    <td>@item.Email1</td>
+                                    <td><a href="/AdminContact/DeleteContact/@item.ContactId" class="btn btn-danger"> Sil</a></td>
+                                    <td><a href="/AdminContact/UpdateContact/@item.ContactId" class="btn btn-warning"> Güncelle</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/AdminContact/AddContact" class="btn btn-primary"> Yeni İletişim Bölümü Ekle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

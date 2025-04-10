@@ -1,0 +1,41 @@
+﻿@model Message
+<div class="col-eight tab-full contact__form">
+    <form method="post" asp-controller="Contact" asp-action="SendMessage">
+        <fieldset>
+            <div class="form-field">
+                <input type="text" placeholder="Adı ve Soyadı" minlength="2" required="" aria-required="true" class="full-width" asp-for="NameSurname">
+            </div>
+            <div class="form-field">
+                <input type="email" placeholder="E-Mail" required="" aria-required="true" class="full-width" asp-for="Email">
+            </div>
+            <div class="form-field">
+                <input type="text" placeholder="Konu" required="" aria-required="true" class="full-width" asp-for="Subject">
+            </div>
+            <div class="form-field">
+                <textarea placeholder="Mesaj" rows="10" cols="50" required="" aria-required="true" class="full-width" asp-for="MessageDetail"></textarea>
+            </div>
+            <div class="form-field">
+                <button class="full-width btn--primary">Gönder</button>
+                <div class="submit-loader">
+                    <div class="text-loader">Gönderiliyor...</div>
+                    <div class="s-loader">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <!-- contact-warning -->
+    <div class="message-warning">
+        Bir şeyler yanlış gitti. Lütfen tekrar deneyin.
+    </div>
+
+    <!-- contact-success -->
+    <div class="message-success">
+        Mesajınız gönderildi, teşekkürler!<br>
+    </div>
+
+</div>

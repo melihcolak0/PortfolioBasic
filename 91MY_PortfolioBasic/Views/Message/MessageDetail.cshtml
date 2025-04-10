@@ -1,0 +1,35 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container-fluid">
+    <h4 class="page-title">Mesajlar</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Mesaj Detayı</div>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <input type="hidden" class="form-control" asp-for="MessageId">
+                        <div class="form-group">
+                            <label><b>Gönderme Tarihi: </b>@Model.SendDate.ToShortDateString()</label>
+                        </div>
+                        <div class="form-group">
+                            <label><b>Gönderen: </b>@Model.NameSurname <small>(@Model.Email)</small></label>
+                        </div>
+                        <div class="form-group">
+                            <label><b>Mesaj İçeriği</b></label>
+                            <textarea class="form-control" asp-for="MessageDetail" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary">Ekle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
